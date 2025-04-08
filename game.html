@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapguru</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="LinkLayer">
+		<div class="dropdown">
+			<a class="buttonlinkbar" href="index.html">HOME</a> <a class="buttonlinkbar" href="aboutus.html">ABOUT US</a> <a class="buttonlinkbar" href="game.html">GAME</a>
+		</div>
+	</div>
+    <br><br><br><br>
+    <h1>Geography Map Game</h1>
+    <p>Click on the map where you think the city is!</p>
+
+    <div id="calendar-controls">
+        <button id="prev-month">Previous Month</button>
+        <span id="month-display"></span>
+        <button id="next-month">Next Month</button>
+    </div>
+
+    <div id="calendar"></div>
+
+    <div id="map-container">
+        <div id="question-box">
+            Where is <span id="target-city"></span>?
+            <img id="question-image" src="" alt="City hint image">
+        </div>
+        <div id="map"></div>
+        
+    </div>
+    <p id="result"></p>
+    <p>Score: <span id="score">0</span></p>
+    <p>Round: <span id="round">1</span>/5</p>
+    <button onclick="startGame()">New Game</button>
+
+    <div id="popup">
+        <p id="popup-message"></p>
+        <div id="previous-scores"></div>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+   
+    <script>   
+    
+    
+
+        const cities = {
+            "Berlin": { lat: 52.517040477490724, lon: 13.388848924018333, img: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg"},
+            "London": { lat: 51.507295501912836, lon: -0.12767593496371887, img: "https://upload.wikimedia.org/wikipedia/commons/6/67/London_Skyline_%28125508655%29.jpeg"},
+            "New York": { lat: 40.71276482903468, lon: -74.00599236251401, img: "https://upload.wikimedia.org/wikipedia/commons/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg"},
+            "Paris": { lat: 48.853480653445786, lon: 2.3483856589557206, img: "https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"},
+            "Tokyo": { lat: 35.688988668894396, lon: 139.69291649839664, img: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg"}
+        
+        };
+
+
+        let targetCity, map, score = 0, round = 0, maxRounds = 5;
+        let answerMarker;
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+        
+    function seededRandom(seed) {
+    var x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+}
+
+    function shuffleArray(array, seed) {
+    let shuffled = array.slice(); // Copy original
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(seededRandom(seed + i) * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+    function startGame(forDate = null) {
+    score = 0;
+    round = 0;
+    if (answerMarker) {
+        map.removeLayer(answerMarker);
+        answerMarker = null;
+    }
+    document.getElementById("score").innerText = score;
+    document.getElementById("round").innerText = round + 1;
+    gameDate = forDate || new Date();
+
+    const key = `${gameDate.getFullYear()}-${gameDate.getMonth()}-${gameDate.getDate()}`;
+    if (localStorage.getItem(`score-${key}`)) {
+        alert("You've already played the quiz for this day!");
+        return;
+    }
+
+    // Create deterministic question order
+    const seed = gameDate.getFullYear() * 10000 + (gameDate.getMonth() + 1) * 100 + gameDate.getDate();
+    const cityNames = Object.keys(cities);
+    const shuffledCities = shuffleArray(cityNames, seed);
+    selectedCities = shuffledCities.slice(0, maxRounds);
+
+    nextRound();
+}
+
+
+        function nextRound() {
+    if (round >= maxRounds) {
+        document.getElementById("target-city").innerText = "Game Over!";
+        document.getElementById("result").innerText = `Final score: ${score}`;
+        saveScore(score);
+        showPopup(`Game Over! Your final score is ${score}.`);
+        return;
+    }
+
+    targetCity = selectedCities[round];
+    document.getElementById("target-city").innerText = targetCity;
+    document.getElementById("result").innerText = "";
+    document.getElementById("round").innerText = round + 1;
+    document.getElementById("question-image").src = cities[targetCity].img;
+
+    if (answerMarker) {
+        map.removeLayer(answerMarker);
+        answerMarker = null;
+    }
+}
+
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371;
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c;
+        }
+
+        function onMapClick(e) {
+            if (!targetCity || round >= maxRounds) return;
+            const { lat, lon } = cities[targetCity];
+            const distance = calculateDistance(e.latlng.lat, e.latlng.lng, lat, lon);
+
+            document.getElementById("result").innerText = `You were ${distance.toFixed(2)} km away!`;
+            updateScore(distance);
+
+            if (answerMarker) map.removeLayer(answerMarker);
+            answerMarker = L.marker([lat, lon]).addTo(map).bindPopup(`Correct location: ${targetCity}`).openPopup();
+
+            round++;
+            setTimeout(nextRound, 2000);
+        }
+
+        function updateScore(distance) {
+            let points = Math.max(1000 - Math.round(distance), 0);
+            score += points;
+            document.getElementById("score").innerText = score;
+        }
+
+        function saveScore(newScore) {
+            let scores = JSON.parse(localStorage.getItem('geoScores') || '[]');
+            scores.push(newScore);
+            if (scores.length > 10) scores = scores.slice(-10);
+            localStorage.setItem('geoScores', JSON.stringify(scores));
+
+            const key = `${gameDate.getFullYear()}-${gameDate.getMonth()}-${gameDate.getDate()}`;
+            localStorage.setItem(`score-${key}`, newScore);
+            updateCalendar();
+        }
+
+        function showPopup(message) {
+            document.getElementById("popup-message").innerText = message;
+            document.getElementById("popup").style.display = 'block';
+        }
+
+        function showPreviousScores() {
+            const scores = JSON.parse(localStorage.getItem('geoScores') || '[]');
+            const scoreList = scores.map((s, i) => `<li>Game ${i + 1}: ${s}</li>`).join('');
+            document.getElementById("previous-scores").innerHTML = `<strong>Previous Scores:</strong><ul>${scoreList}</ul>`;
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = 'none';
+        }
+
+        function createCalendar() {
+            const today = new Date();
+            const year = currentYear;
+            const month = currentMonth;
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const firstDay = new Date(year, month, 1).getDay();
+            const calendar = document.getElementById("calendar");
+            const monthDisplay = document.getElementById("month-display");
+
+            // Set the full month-year text
+            monthDisplay.textContent = `${today.toLocaleString('default', { month: 'long' })} ${year}`;
+
+            calendar.innerHTML = '';
+
+            let dayButtonCount = 0;
+
+            // Create empty slots before the first day of the month
+            for (let i = 0; i < firstDay; i++) {
+                const emptySlot = document.createElement('div');
+                calendar.appendChild(emptySlot);
+                dayButtonCount++;
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const date = new Date(year, month, day);
+                const key = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+                
+                const button = document.createElement('button');
+                button.textContent = day;
+                button.classList.add('day-button');
+
+                if (date > today) {
+                    button.disabled = true;
+                } else {
+                    if (localStorage.getItem(`score-${key}`)) {
+                        const score = localStorage.getItem(`score-${key}`);
+                        const scoreLabel = document.createElement('div');
+                        scoreLabel.classList.add('day-score');
+                        scoreLabel.textContent = `${score}`;
+                        button.appendChild(scoreLabel);
+                        button.disabled = true;
+                    }
+
+                    button.addEventListener('click', () => startGame(date));
+                }
+
+                calendar.appendChild(button);
+                dayButtonCount++;
+            }
+        }
+
+        function updateCalendar() {
+            createCalendar();
+        }
+
+        function goToNextMonth() {
+            currentMonth = (currentMonth + 1) % 12;
+            if (currentMonth === 0) currentYear++;
+            updateCalendar();
+            updateMonthDisplay();
+        }
+
+        function goToPreviousMonth() {
+            currentMonth = (currentMonth - 1 + 12) % 12;
+            if (currentMonth === 11) currentYear--;
+            updateCalendar();
+            updateMonthDisplay();
+        }
+
+        function updateMonthDisplay() {
+            const monthDisplay = document.getElementById("month-display");
+            const today = new Date(currentYear, currentMonth);
+            monthDisplay.textContent = `${today.toLocaleString('default', { month: 'long' })} ${currentYear}`;
+        }
+
+        window.onload = function () {
+            map = L.map('map').setView([20, 0], 2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+            map.on('click', onMapClick);
+            createCalendar();
+
+            document.getElementById('prev-month').onclick = goToPreviousMonth;
+            document.getElementById('next-month').onclick = goToNextMonth;
+
+            
+        const tiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>', 
+	    }).addTo(map);
+        };
+
+
+    </script>
+
+
+</body>
+</html>
