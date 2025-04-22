@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Mapguru</title>
+	<title>MapGuru</title>
 	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<link href="CSS/style.css" rel="stylesheet" type="text/css">
+    <meta name="description" content="MapGuru is a fun and educational geography quiz game where you guess the locations of cities around the world. Play now and boost your map skills!">
+	<meta name="keywords" content="MapGuru, geography quiz, map game, city guessing game, world geography, interactive maps, learn geography, online geography game">
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
 	<div id="LinkLayer">
 		<div class="dropdown">
 			<a class="buttonlinkbar" href="index.html">HOME</a> <a class="buttonlinkbar" href="aboutus.html">ABOUT US</a> <a class="buttonlinkbar" href="game.html">GAME</a>
 		</div>
 	</div>
-    <!--
+    
 	<div id="LinkLayer2">
 		<div class="mobile-container">
 			<div class="topnav">
@@ -34,19 +37,115 @@
 		</script>
         
 	</div>
-    -->
+    
 	<div id="layerLogo">
-		<a href="index.html"><img alt="logo" class="logo" src="images/logo_template.png"></a>
+		<a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a>
 	</div>
 	
     
-        <div id="Carousel">
-        <br><br><br><br><br><h1> Carousel</h1><br>
-		<br>
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+    <div class="carousel">
+        <div class="carousel-track">
+          <img src="images/20250117_154154.jpg" class="carousel-slide">
+          <img src="images/20250116_164940.jpg" class="carousel-slide">
+          <img src="images/20250116_154437.jpg" class="carousel-slide">
+        </div>
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+
+        <script>
+            const track = document.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = document.querySelector('.carousel-button.next');
+            const prevButton = document.querySelector('.carousel-button.prev');
+            let currentSlide = 0;
+          
+            function updateSlide(index) {
+              const slideWidth = slides[0].getBoundingClientRect().width;
+              track.style.transform = 'translateX(-' + (slideWidth * index) + 'px)';
+            }
+          
+            nextButton.addEventListener('click', () => {
+              currentSlide = (currentSlide + 1) % slides.length;
+              updateSlide(currentSlide);
+            });
+          
+            prevButton.addEventListener('click', () => {
+              currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+              updateSlide(currentSlide);
+            });
+          
+            // Optional auto-slide
+            setInterval(() => {
+              currentSlide = (currentSlide + 1) % slides.length;
+              updateSlide(currentSlide);
+            }, 5000);
+          </script>
+
+      </div>
+		
     <div class="container">
-        <div id= "boxs" >1</div>
-        <div id= "boxs" >2</div>
+        <div id= "Game_box" >
+            <h2><b>MapGuru</b></h2>
+        <p>MapGuru is a fun and interactive geography game that tests how well you know the world. Each day,
+             you’ll see a photo of a city and try to guess where it is by clicking on the map. After you guess,
+            the game shows you the correct location and tells you how far off you were—plus your score based 
+            on how close you got! You can also use the calendar to play older challenges, but future dates are
+            locked to keep it fair. It's a great way to explore new places, challenge your geography skills, 
+            and maybe even discover cities you've never heard of. Everything runs in your browser, and the 
+            cities, photos, and map locations are loaded smoothly using JavaScript and Leaflet. Whether you're
+            a traveler, a student, or just curious about the world, MapGuru offers a new city challenge every
+             day—so come play and see how close you can get!
+             
+            <br><br>
+            <a href="game.html" target="_self">
+            <button type="button">Play MapGuru </button> </a>
+        </div>
+        
+         <div id= "About_box" >
+            <h2><b>About Us</b></h2>
+            <p>We created MapGuru out of a love for geography, travel, and daily challenges. Our goal is to make
+               learning about the world exciting and fun for everyone—whether you're a seasoned globetrotter or
+               just curious about different cities and cultures. MapGuru is built by a small, passionate team
+                of developers and map lovers who believe education should be engaging and interactive. We 
+                designed the game to be simple, clean, and easy to use, with new city challenges each day to keep
+                things fresh. Every feature—from the photo clues to the map clicks—is crafted to help you learn
+                by playing. We're constantly working on improving the game and expanding it with new ideas, 
+                features, and locations. MapGuru is more than just a game—it's a growing community of 
+                explorers. Thanks for joining us on this journey around the globe!</p>
+
+            <br><br>
+            <a href="aboutus.html" target="_self">
+            <button type="button">Learn more </button></a>
+         </div>    
+         <br><br>
     </div>
-    
+
+    <div class="newsletter">
+        <h1><b>NEWSLETTER</b></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusceposuere mi porttitor efficitur tincidunt. Sed ut  augue dictum,<br></p>
+                <form>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" required>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required> <br><br>
+                    <input name='submit' type="submit" value="Submit">
+
+                  </form>
+
+                  <div id="formFeedback" style="margin-top: 15px;"></div>
+                  <br><br>
+</div>
+                
+     <div class="bottomlinkbar">
+        <br>
+            <a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a>
+        <br><br>
+            <a href="index.html">HOME</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <a href="aboutus.html">ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <a href="game.html">GAME</a> 
+     </div>
+
+    </body>
+</html>

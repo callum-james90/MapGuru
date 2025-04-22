@@ -6,9 +6,10 @@ MapGuru is an interactive map-based game that challenges users to guess the loca
 
 The goal of MapGuru is to enhance front-end development skills while integrating interactive geolocation features. Users will be presented with a city name and must guess where it is on the map. The closer their guess is to the actual location, the higher their score.
 
-## 🚀 Tech Stack
+View the website on:
 
-- **Astro** – A modern front-end framework for building fast, content-focused websites.
+
+View code on GitHub on:
 
 ## 🛠️ Features
 
@@ -17,9 +18,19 @@ The goal of MapGuru is to enhance front-end development skills while integrating
 - Clean and responsive UI
 - Great learning tool for geography enthusiasts
 
-## 📌 Project Status
+## How it works
 
-This project is currently under development.
+## Function
+
+## SEO
+
+I have included Meta Descriptions, title tags, Meta Keywords into my website. If this site was deployed I would also do more research into keywords, link building and citations.
+
+## W3C Validation
+
+## Accessibility
+
+## Performace
 
 ## 📷 Screenshots
 

@@ -1,0 +1,253 @@
+{
+            "Berlin": { 
+            "lat": 52.517040477490724, 
+            "lon": 13.388848924018333, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Museumsinsel_Berlin_Juli_2021_1_%28cropped%29_b.jpg"
+        },
+            "London": { 
+            "lat": 51.507295501912836, 
+            "lon": -0.12767593496371887, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/6/67/London_Skyline_%28125508655%29.jpeg"
+        },
+            "New York": { 
+            "lat": 40.71276482903468, 
+            "lon": -74.00599236251401, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg"
+        },
+            "Paris": { 
+            "lat": 48.853480653445786, 
+            "lon": 2.3483856589557206, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg"
+        },
+            "Tokyo": { 
+            "lat": 35.688988668894396, 
+            "lon": 139.69291649839664, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg"
+        },
+            "Rome": { 
+            "lat": 41.89997918391313, 
+            "lon": 12.476695885585713, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/2/20/Rom_Colosseum_Sept_2021_3.jpg"
+        },
+            "Los Angeles": { 
+            "lat": 34.04805088436396, 
+            "lon": -118.25421069884675, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Hollywood_Sign_%28Zuschnitt%29.jpg"
+        },
+            "Sydney": { 
+            "lat": -33.8687271084898, 
+            "lon": 151.20693730746956, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/5/53/Sydney_Opera_House_and_Harbour_Bridge_Dusk_%282%29_2019-06-21.jpg"
+        },
+            "Dubai": { 
+            "lat": 25.25808418758342, 
+            "lon": 55.29754713407277, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/4/46/Dubai_Skyline_mit_Burj_Khalifa_%28cropped%29.jpg"
+        },
+            "Toronto": { 
+            "lat": 43.647897225335356, 
+            "lon": -79.38353978879395, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/a/a8/CC_2022-06-18_193-Pano_%28cropped%29_01.jpg"
+        },
+            "Amsterdam": { 
+            "lat": 52.37800089990921, 
+            "lon": 4.899996016555946, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/b/be/KeizersgrachtReguliersgrachtAmsterdam.jpg"
+        },
+            "Buenos Aires": { 
+            "lat": -34.607616266773526, 
+            "lon": -58.43707312073508, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Catedral_Metropolitana_-_Buenos_Aires2.jpg"
+        },
+            "Lisbon": { 
+            "lat": 38.71730224523989, 
+            "lon": -9.14305529992339, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/4/41/Lisbon_%2836831596786%29_%28cropped%29.jpg"
+        },
+            "Prague": { 
+            "lat": 50.08584110051953, 
+            "lon": 14.422946456843562, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Prague_%286365119737%29.jpg"
+        },
+            "Warsaw": { 
+            "lat": 52.230745360690236, 
+            "lon": 21.01628158442142, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Pa%C5%82ac_w_Wilanowie_1.jpg"
+        },
+            "Belgrade": { 
+            "lat": 44.81780997442689, 
+            "lon": 20.456880687186725, 
+            "img":"https://upload.wikimedia.org/wikipedia/commons/a/a0/Panorama_Belgrad.jpg"
+        },
+            "Tbilisi": { 
+            "lat": 41.69345266220202, 
+            "lon": 44.801459883198135, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tbilisi%2C_Georgia._View_on_historical_neighborhoods_from_a_hill.jpg"
+        },
+            "Muscat": { 
+            "lat": 23.587279990085065, 
+            "lon": 58.38212049659691, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sultan_Qaboos_Street_in_Muscat_2019-11-30.jpg"
+        },
+            "Tallinn": { 
+            "lat": 59.43674493324707, 
+            "lon": 24.74645621685545, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/7/70/Raekoja_plats_at_night.jpg"
+        }, 
+            "Riga": { 
+            "lat": 56.949395709925994, 
+            "lon": 24.10518414121887, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/b/b2/RigaSkyline_%28cropped%29.jpg"
+        },
+            "Beijing": { 
+            "lat": 39.9061873026142, 
+            "lon": 116.39126189840385, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/2/23/Hall_of_Supreme_Harmony_%2820241127120000%29.jpg"
+        },
+            "Madrid": { 
+            "lat": 40.42135170008683, 
+            "lon": -3.7012469233776812, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Palaciorealycatedraldelaalmudena_retouched.jpg"
+        },
+            "Moscow": { 
+            "lat": 55.750435242092635, 
+            "lon": 37.617496981056775, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/8/85/Saint_Basil%27s_Cathedral_and_the_Red_Square.jpg"
+        },
+            "Cairo": { 
+            "lat": 30.047554194541647, 
+            "lon": 31.24109692127712, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/9/93/Flickr_-_HuTect_ShOts_-_Citadel_of_Salah_El.Din_and_Masjid_Muhammad_Ali_%D9%82%D9%84%D8%B9%D8%A9_%D8%B5%D9%84%D8%A7%D8%AD_%D8%A7%D9%84%D8%AF%D9%8A%D9%86_%D8%A7%D9%84%D8%A3%D9%8A%D9%88%D8%A8%D9%8A_%D9%88%D9%85%D8%B3%D8%AC%D8%AF_%D9%85%D8%AD%D9%85%D8%AF_%D8%B9%D9%84%D9%8A_-_Cairo_-_Egypt_-_17_04_2010_%284%29.jpg"
+        },
+            "Mumbai": { 
+            "lat": 19.07779938845178, 
+            "lon": 72.87870106597148, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/e/e7/BackBay_skyline.jpg"
+        },
+            "Bangkok": { 
+            "lat": 13.752446326784863, 
+            "lon": 100.4934835329837, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/0/0a/01-%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%9A%E0%B8%8D%E0%B8%88%E0%B8%A1%E0%B8%9A%E0%B8%9E%E0%B8%B4%E0%B8%95%E0%B8%A3%E0%B8%94%E0%B8%B8%E0%B8%AA%E0%B8%B4%E0%B8%95%E0%B8%A7%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3.jpg"
+        },
+            "São Paulo": { 
+            "lat": -23.552207409438168, 
+            "lon": -46.64719828405015, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/7/73/Marginal_Pinheiros_e_Jockey_Club.jpg"
+        },
+            "Seoul": { 
+            "lat": 37.56667931012554, 
+            "lon": 126.97829569830935, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/4/40/Seoul_at_night_%28cropped%29.jpg"
+        },
+            "Istanbul": { 
+            "lat": 41.0091957418212, 
+            "lon": 28.966216960002384, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Historical_peninsula_and_modern_skyline_of_Istanbul.jpg"
+        },
+            "Mexico City": { 
+            "lat": 19.432615573817955, 
+            "lon": -99.13318634443404, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/3/3d/MX_MM_PANOR%C3%81MICAS_DESFILE_Z%C3%93CALO.jpg"
+        },
+            "Athens": { 
+            "lat": 37.97756356710947, 
+            "lon": 23.729276224947853, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/7/74/Monastiraki_Square_and_Acropolis_in_Athens_%2844149181684%29.jpg"
+        },
+            "Nairobi": { 
+            "lat": -1.2832672348972807, 
+            "lon": 36.81724021985315, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/4/44/A_giraffe_with_a_beautiful_background_of_Nairobi_City_Skyline.jpg"
+        },
+            "Cape Town": { 
+            "lat": -33.9224932316156, 
+            "lon": 18.420289698212713, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/0/04/Cape_Town%2C_Waterfront_-_panoramio.jpg"
+        },
+            "Kuala Lumpur": { 
+            "lat": 3.1516914401693867, 
+            "lon": 101.69423222846683, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Kl-skyline-at-night-2022.jpg"
+        },
+            "Lima": { 
+            "lat": -12.069727221507335, 
+            "lon": -77.03542145684858, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/6/69/Bas%C3%ADlica_Catedral_Metropolitana_de_Lima_%28cropped%29.jpg"
+        },
+            "Bogota": { 
+            "lat": 4.65345755855958,  
+            "lon": -74.08364915121248, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/2/20/Bogota%2C_Colombia_%2836668708290%29.jpg"
+        },
+            "Vancouver": { 
+            "lat": 49.26094652444385, 
+            "lon": -123.1149822489129, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/5/57/Concord_Pacific_Master_Plan_Area.jpg"
+        },
+            "Abu Dhabi": { 
+            "lat": 24.45351177072257, 
+            "lon": 54.37743858439396, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Abu_dhabi_skylines_2014.jpg"
+        },
+            "Jakarta": { 
+            "lat": -6.175407042460222, 
+            "lon": 106.82716597517185, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Busway_in_Bundaran_HI.jpg"
+        },
+            "Santiago": { 
+            "lat": -70.64937305846159, 
+            "lon": -33.440641638893894, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Santiago_de_Chile%2C_Desde_Cerro_San_Crist%C3%B3bal_%28cropped_panorama%29.jpg"
+        },
+            "Manila": { 
+            "lat": 14.594885341337871, 
+            "lon": 120.97825843797676, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Manila_Central_Post_Office_at_night_from_across_the_Pasig_River.jpg"
+        },
+            "Helsinki": { 
+            "lat": 60.16749654128449, 
+            "lon": 24.94182453776915, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/3/36/Helsinki_July_2013-27a.jpg"
+        },
+            "Oslo": { 
+            "lat": 59.91334012209788, 
+            "lon": 10.738969800483488, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Nationaltheatret_evening.jpg"
+        },
+            "Casablanca": { 
+            "lat": 33.59407698962143, 
+            "lon": -7.62165882688717, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/a/a2/K%C3%B6nigl_Palast_Tore_20111013_1.jpg"
+        },
+            "Doha": { 
+            "lat": 25.285634982294226, 
+            "lon": 51.52641236179426, 
+            "img": "https://upload.wikimedia.org/wikipedia/en/c/c7/Museum_of_Islamic_Art_in_Doha%2C_Qatar_%2832673171432%29.jpg"
+        },
+            "Vilnius": { 
+            "lat": 54.68704562165789, 
+            "lon": 25.282909109309827, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Vilnius_old_town_by_Augustas_Didzgalvis.jpg"
+        },
+            "Skopje": { 
+            "lat": 41.99609045733186, 
+            "lon": 21.431646042040427, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/7/73/Skopje_view_from_Kale_3.jpg"
+        },
+            "Accra": { 
+            "lat": 5.6610834871653, 
+            "lon": -0.20281779135908096, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Acca.jpg"
+        },
+            "Baku": { 
+            "lat": 40.37556285210013, 
+            "lon": 49.83280703584316, 
+            "img": "https://upload.wikimedia.org/wikipedia/commons/9/96/Gyz-galasy-devichja-bashnja-azerbajdzhan-37.jpg"
+        },
+            "Tashkent": { 
+            "lat": 40.37556285210013, 
+            "lon": 49.83280703584316, 
+            "img": "https://upload.wikimedia.org/wikipedia/en/f/f6/Nest_One_Tashkent.jpg"
+        }
+}
+    

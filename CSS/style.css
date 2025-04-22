@@ -11,6 +11,7 @@ img.logo{
 	max-width:100%;
 	max-height:100%;
 	z-index:2;
+    
 }
 
 div#layerLogo{
@@ -19,7 +20,8 @@ div#layerLogo{
 	z-index:2;
 	left:5%;
 	top:0px;
-	background-color: #90A2D8;
+	background-color: #B3C3E7;
+    object-fit: cover;
 	max-width:13%;
 	max-height:10%;
 }
@@ -33,15 +35,15 @@ div#LinkLayer{
 	top:0px;
 	color: #fdfeff;
 	padding: 1% 0%;
-	background-color: #90A2D8;
+	background-color: #B3C3E7;
 	max-width:100%;
-	max-height:100%;
+	max-height:90%;
 	text-align: right;
 	font-size: 220%;
 }
 
 .buttonlinkbar {
-    background-color: #90A2D8; 
+    background-color: #B3C3E7; 
     border: none;
     color: #ffffff;
     padding: 1.2% 8%;
@@ -52,61 +54,124 @@ div#LinkLayer{
 
 a.buttonlinkbar:hover{
      background: #e7d7b3;
-     color: #90A2D8
+     color: black;
 }
+
 
 .mobile-container {
 	display: none;
 }
 
-div#LayerTopPhoto{
-	position:absolute;
-	width:100%;
-	z-index:1;
-	left:0px;
-	top:0px;
-	max-width:100%;
-	max-height:100%;
-}
 
 /*index page*/
-
-div#Carousel{
-	position:absolute;
-	width:100%;
-    height:70%;
-    text-align: center;
+.carousel {
+    position:absolute;
 	z-index:1;
-	left:0px;
-	top:17.5%;
-	max-width:100%;
-	max-height:100%;
-    background-color: #ffffff;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    width:100%;
-    height:4000%;
+	left:17%;
+	top:19.5%;
+	max-width:70%;
+	max-height: 90%;
     background-color: #e7d7b3;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    object-fit: contain;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+
+div.container {
+    display: flex;
+    position: absolute;
+    justify-content: space-evenly;
+    min-height:100%;
+    min-width:98.4%;
+    left:0;
+    top:115%;
+    background-color: #B3E7BD;
+    padding: 10px;
    }
 
-#boxs {
-    width: 25%;
-    height: 500px;
+   #Game_box {
+    position: sticky;
+    max-width: 30%;
+    max-height: 5000px;
+    background-color: #B3C3E7;
+    padding: 10px;
+   }
+
+   #About_box {
+    position: sticky;
+    max-width: 30%;
+    min-height: 300px;
+    background-color: #B3C3E7;
+    padding: 10px;
+   }
+
+    div.newsletter{
+    position:absolute;
+    min-width: 100%;
+    max-height: 3%;
+    top:225%;
+    left:0%;
     text-align: center;
-    background-color: #90A2D8;
-    border: 2px #ffffff;
+    background-color: #e7d7b3;
+    border: 5px black;
    }
 
+    div.bottomlinkbar{
+    position: absolute;
+    top:270%;
+    left:0%;
+    width: 100%;
+    height:38%;
+    text-align: center;
+    background-color: #B3C3E7;
+    overflow: hidden;
+   }
 
 /*about us page*/
+div.carouselabout{
+    position: static;
+    left:0%;
+}
+
 /*game page*/
 
 
 
 #map-container { 
+    display: flex;
+    flex-direction: column;
     position: relative; 
     width: 80%; 
     margin: auto; 
@@ -115,12 +180,14 @@ div#Carousel{
 #map { 
     height: 500px;
      cursor: crosshair; 
+     margin: 10px 0;
+     align-items: center;
     }
 
 #question-box {
     position: absolute;
     top: 10px;
-    left: 10px;
+    right: 10px;
     background: rgba(255, 255, 255, 0.95);
     padding: 10px 15px;
     border-radius: 5px;
@@ -156,12 +223,15 @@ div#Carousel{
     margin-top: 10px;
 }
 #calendar {
-    border: 1px solid #ccc;
+    border: 2px solid black;
     margin: 20px auto;
     width: fit-content;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 1fr) ;
     gap: 5px;
+    background-color: #bec4be;
+    gap: 5px;
+    padding: 10px;
 }
 .day-button {
     padding: 22px 22px;
@@ -170,12 +240,16 @@ div#Carousel{
     cursor: pointer;
     border-radius: 100px;
     position: relative;
+    width:100%;
+    font-size: 1em
+
 }
 .day-button:hover {
     background: #e0e0e0;
 }
 .day-score {
-    position: center;
+    position: static;
+    text-align: center;
     font-size: 10px;
     color: green;
 }
@@ -184,6 +258,24 @@ div#Carousel{
     cursor: not-allowed;
 }
 #calendar-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    position:absolute;
     margin-bottom: 10px;
+    border: 2px solid black;
+    background-color: #bec4be;
+    justify-content: center;
+    width: fit-content;
+    left: 40%
 }
+.day-button.today {
+     border: 2px solid #ff5722;
+     font-weight: bold;
+    }
+    
+.day-button.today[disabled] {
+    background-color: #e8f5e9;
+    }   
+    
 }
