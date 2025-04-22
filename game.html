@@ -10,39 +10,23 @@
     <link href="CSS/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div id="LinkLayer">
-        <div class="dropdown">
-            <a class="buttonlinkbar" href="index.html">HOME</a> <a class="buttonlinkbar" href="aboutus.html">ABOUT US</a> <a class="buttonlinkbar" href="game.html">GAME</a>
+    
+     <header class="main-header">
+        <div class="logo-container">
+            <a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a>
         </div>
-    </div>
-     <!--
-	<div id="LinkLayer2">
-		<div class="mobile-container">
-			<div class="topnav">
-				<a class="active" href="#home">Logo</a>
-				<div id="myLinks">
-					<a href="aboutus.html">ABOUT US</a> <a href="virtualtours.html">VIRTUAL TOURS</a> <a class="buttonlinkbar" href="https://thetravelcultblog.wordpress.com/" target="_blank">BLOG</a> <a href="apps.html">APPS</a>
-				</div><a class="icon" href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-			</div>
-		</div>
-		<script>
-		function myFunction() {
-		var x = document.getElementById("myLinks");
-		if (x.style.display === "block") {
-		  x.style.display = "none";
-		} else {
-		  x.style.display = "block";
-		}
-		}
-		</script>
         
-	</div>
-    -->
-	<div id="layerLogo">
-		<a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a>
-	</div>
-    <br><br><br><br><br><br>
-    <p>Click on the map where you think the city is!</p>
+        <nav class="main-nav">
+            <a class="nav-link" href="index.html">HOME</a>
+            <a class="nav-link" href="aboutus.html">ABOUT US</a>
+            <a class="nav-link" href="game.html">GAME</a>
+        </nav>
+        
+        <button class="mobile-menu-button" aria-label="Toggle menu">☰</button>
+    </header>
+      
+    
+
 
     <div id="map-container">
         <div id="question-box">
@@ -51,10 +35,11 @@
         </div>
         <div id="map"></div>
     </div>
-    <p id="result"></p>
+    
+    <center><p id="result"></p>
     <p>Score: <span id="score">0</span></p>
     <p>Round: <span id="round">1</span>/5</p>
-    <button onclick="startGame()">New Game</button>
+    <button onclick="startGame()">New Game</button></center>
 
     <div id="popup">
         <p id="popup-message"></p>
@@ -75,7 +60,7 @@
 
     <div class="bottomlinkbar">
         <br>
-            <a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a>
+            <center><a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a></center>
         <br><br>
             <a href="index.html">HOME</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             <a href="aboutus.html">ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -83,7 +68,7 @@
      </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
+   
     <script>
         //Variables
         let cities = {};
@@ -363,6 +348,6 @@
 
         
     </script>
-    
+     <script src="script.js"></script>
 </body>
 </html>

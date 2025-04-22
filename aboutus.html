@@ -6,97 +6,120 @@
 	<meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="description" content="MapGuru is a fun and educational geography quiz game where you guess the locations of cities around the world. Play now and boost your map skills!">
     <meta name="keywords" content="MapGuru, geography quiz, map game, city guessing game, world geography, interactive maps, learn geography, online geography game">
-	<link href="CSS/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+    
 
     </head>
     <body>
-</head>
-<body>
-	<div id="LinkLayer">
-		<div class="dropdown">
-			<a class="buttonlinkbar" href="index.html">HOME</a> <a class="buttonlinkbar" href="aboutus.html">ABOUT US</a> <a class="buttonlinkbar" href="game.html">GAME</a>
-		</div>
-	</div>
 
-     <!--
-	<div id="LinkLayer2">
-		<div class="mobile-container">
-			<div class="topnav">
-				<a class="active" href="#home">Logo</a>
-				<div id="myLinks">
-					<a href="aboutus.html">ABOUT US</a> <a href="virtualtours.html">VIRTUAL TOURS</a> <a class="buttonlinkbar" href="https://thetravelcultblog.wordpress.com/" target="_blank">BLOG</a> <a href="apps.html">APPS</a>
-				</div><a class="icon" href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-			</div>
-		</div>
-		<script>
-		function myFunction() {
-		var x = document.getElementById("myLinks");
-		if (x.style.display === "block") {
-		  x.style.display = "none";
-		} else {
-		  x.style.display = "block";
-		}
-		}
-		</script>
+        <header class="main-header">
+            <div class="logo-container">
+                <a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a>
+            </div>
+            
+            <nav class="main-nav">
+                <a class="nav-link" href="index.html">HOME</a>
+                <a class="nav-link" href="aboutus.html">ABOUT US</a>
+                <a class="nav-link" href="game.html">GAME</a>
+            </nav>
+            
+            <button class="mobile-menu-button" aria-label="Toggle menu">☰</button>
+        </header>
         
-	</div>
-    -->
-	<div id="layerLogo">
-		<a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a>
-	</div>
-
-    <div class="jumbotron text-center">
+        <script src="script.js"></script>
+        
+    
+    <div class="jumbotron">
         <br><br>
         <h1>About Map Guru</h1> 
       </div>
         
-      <div class="containers">
+      <div class="containerabout">
         <div class="column">
           <div class="col-sm-4">
-            <h3>Column 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            <h3>The Project</h3>
+            <p>MapGuru is an engaging and interactive map-based geography game designed to challenge 
+                users' knowledge of world cities. In each game session, players are presented with the name of a
+                 city and a visual clue, such as an image, and must click on a world map to guess where that city
+                  is located. The closer the guess, the higher the score, encouraging both precision and learning.
+                   With a daily quiz system and a calendar feature that tracks past scores, players are motivated
+                    to return each day, improve their map skills, and challenge themselves with new cities.<br>
+
+                The project was developed as part of a Front-End Web Development assessment for the UCD 
+                Professional Academy course. It showcases key skills such as HTML, CSS, JavaScript, DOM 
+                manipulation, and API integration using Leaflet.js for the interactive map. MapGuru combines
+                 fun with education, offering a dynamic way to learn geography while demonstrating the developer's
+                  technical capabilities.</p><br>
+            
           </div>
           <div class="col-sm-4">
-            <h3>Column 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            <h3>How To Play</h3>
+            <p> Step 1: Click “New Game” to start a quiz for today.<br>
+                Step 2: A city name and an image hint will appear above the map.<br>
+                Step 3: Study the image, then click the map where you think the city is located.<br>
+                Step 4: After your guess, the correct location is shown with a marker.<br>
+                Step 5: You’ll see how many kilometers away your guess was and earn up to 1000 points per round.<br>
+                Step 6: Each game has 5 rounds. Try to get the highest total score!<br>
+                Step 7: After the game, your score is saved and shown on the calendar.<br>
+                Step 8: You can only play one game per day.<br>
+                Step 9: To replay past quizzes, use the calendar to pick a previous day.<br>
+                Step 10:Come back tomorrow and play again.</p><br>
+                
+                
           </div>
           <div class="col-sm-4">
-            <h3>Column 3</h3>        
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+            <h3>Travel</h3>        
+            <p>Travel is one of the most enriching experiences in life—it opens your mind, introduces you to new
+                 cultures, and helps you see the world from different perspectives. But as exciting as it is, 
+                 travel also comes with challenges, and one of the most important skills is knowing where you are.
+                 Whether you're navigating a new city, exploring remote landscapes, or using public transportation
+                 abroad, having a good sense of geography can save time, reduce stress, and keep you safe. 
+                 Understanding maps, directions, and global locations not only enhances your travel experience but
+                 also boosts your confidence and independence. It allows you to appreciate the history, culture, and
+                 significance of the places you visit. In today’s world, where international travel is more 
+                 accessible than ever, being geographically aware helps you connect the dots between people and 
+                 places. In short, knowing where you are makes travel more meaningful, memorable, and enjoyable. </p>
+                  <br><br>
           </div>
         </div>
       </div>
 
-      
+     
       <div class="carouselabout">
-        <h2>How to Play MapGuru</h2>  
+        <h2><center>How to Play MapGuru</center></h2>  
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
           </ol>
       
-          <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="images/20250116_154437.jpg" alt="Los Angeles" >
+              <img src="images/Question.png" alt="Question is 'Where is Bangkok'" >
+              <h3>Questions</h3>
+                    <p>Find your question in the top right corner!</p>
             </div>
       
             <div class="item">
-              <img src="images/20250116_164940.jpg" alt="Chicago" >
+              <img src="images/Bangkokguess.png" alt="Chicago" >
+              <h3>Guess the city</h3>
+                    <p>Click on the map where you think it is. Once clicked the map will give you the answer</p>
             </div>
           
             <div class="item">
-              <img src="images/20250117_154154.jpg" alt="New york" >
+              <img src="images/FinalScore.png" alt="New york" >
+              <h3>How many points can you get?</h3>
+                    <p>There are 5 rounds. 1000 points if you guess correctly but you lose 1 point for every killometer you are wrong by! Can you beat us?</p>
             </div>
+
+            <div class="item">
+                <img src="images/Map.png" alt="New york" >
+            
+              </div>
           </div>
       
           <!-- Left and right controls -->
@@ -111,19 +134,12 @@
         </div>
       </div>
 
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
+    
 
 
     <div class="bottomlinkbar">
         <br><br>
-            <a href="index.html"><img alt="logo" class="logo" src="images/logo_template.png"></a>
+            <a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a>
         <br><br><br>
             <a href="index.html">HOME</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             <a href="aboutus.html">ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 

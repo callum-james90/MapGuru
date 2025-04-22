@@ -10,45 +10,30 @@
 </head>
 <body>
 
-	<div id="LinkLayer">
-		<div class="dropdown">
-			<a class="buttonlinkbar" href="index.html">HOME</a> <a class="buttonlinkbar" href="aboutus.html">ABOUT US</a> <a class="buttonlinkbar" href="game.html">GAME</a>
-		</div>
-	</div>
-    
-	<div id="LinkLayer2">
-		<div class="mobile-container">
-			<div class="topnav">
-				<a class="active" href="#home">Logo</a>
-				<div id="myLinks">
-					<a href="aboutus.html">ABOUT US</a> <a href="virtualtours.html">VIRTUAL TOURS</a> <a class="buttonlinkbar" href="https://thetravelcultblog.wordpress.com/" target="_blank">BLOG</a> <a href="apps.html">APPS</a>
-				</div><a class="icon" href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-			</div>
-		</div>
-		<script>
-		function myFunction() {
-		var x = document.getElementById("myLinks");
-		if (x.style.display === "block") {
-		  x.style.display = "none";
-		} else {
-		  x.style.display = "block";
-		}
-		}
-		</script>
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a>
+        </div>
         
-	</div>
+        <nav class="main-nav">
+            <a class="nav-link" href="index.html">HOME</a>
+            <a class="nav-link" href="aboutus.html">ABOUT US</a>
+            <a class="nav-link" href="game.html">GAME</a>
+        </nav>
+        
+        <button class="mobile-menu-button" aria-label="Toggle menu">☰</button>
+    </header>
     
-	<div id="layerLogo">
-		<a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a>
-	</div>
+    <script src="script.js"></script>
 	
     
         
     <div class="carousel">
         <div class="carousel-track">
-          <img src="images/20250117_154154.jpg" class="carousel-slide">
-          <img src="images/20250116_164940.jpg" class="carousel-slide">
-          <img src="images/20250116_154437.jpg" class="carousel-slide">
+          <img src="images/Gibraltar.png" class="carousel-slide">
+          <img src="images/NewGrange.png" class="carousel-slide">
+          <img src="images/Kotor.png" class="carousel-slide">
+          <img src="images/Map.png" class="carousel-slide">
         </div>
         <button class="carousel-button prev">&#10094;</button>
         <button class="carousel-button next">&#10095;</button>
@@ -120,32 +105,16 @@
          </div>    
          <br><br>
     </div>
-
-    <div class="newsletter">
-        <h1><b>NEWSLETTER</b></h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusceposuere mi porttitor efficitur tincidunt. Sed ut  augue dictum,<br></p>
-                <form>
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname" required>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required> <br><br>
-                    <input name='submit' type="submit" value="Submit">
-
-                  </form>
-
-                  <div id="formFeedback" style="margin-top: 15px;"></div>
-                  <br><br>
-</div>
                 
      <div class="bottomlinkbar">
         <br>
-            <a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a>
+            <center><a href="index.html"><img alt="logo" class="logo" src="images/MapGuru.png"></a></center>
         <br><br>
             <a href="index.html">HOME</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             <a href="aboutus.html">ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
             <a href="game.html">GAME</a> 
      </div>
+
 
     </body>
 </html>

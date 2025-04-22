@@ -1,45 +1,53 @@
-/*All links*/
-@media only screen and (max-width: 1400px){
-	
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     color: black;
-	background-color: #e7d7b3;
-	z-index:1;
+    background-color: #e7d7b3;
+    z-index: 1;
+    text-decoration: none;
 }
 
-img.logo{
-	max-width:100%;
-	max-height:100%;
-	z-index:2;
-    
+/* ===== HEADER & NAVIGATION ===== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #B3C3E7;
+    padding: 15px 20px;
+    max-width: 100%;
+    position: relative;
 }
 
-div#layerLogo{
-	position:absolute;
-	width:158%;
-	z-index:2;
-	left:5%;
-	top:0px;
-	background-color: #B3C3E7;
-    object-fit: cover;
-	max-width:13%;
-	max-height:10%;
+.logo-container {
+    flex: 0 0 auto;
 }
 
-div#LinkLayer{
-	position:absolute;
-    border:2px black;	
-	width:100%;
-	z-index:2;
-	left:0px;
-	top:0px;
-	color: #fdfeff;
-	padding: 1% 0%;
-	background-color: #B3C3E7;
-	max-width:100%;
-	max-height:90%;
-	text-align: right;
-	font-size: 220%;
+.logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #fdfeff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .buttonlinkbar {
@@ -52,43 +60,50 @@ div#LinkLayer{
     display: inline-block;
 }
 
-a.buttonlinkbar:hover{
-     background: #e7d7b3;
-     color: black;
+a.buttonlinkbar:hover {
+    background: #e7d7b3;
+    color: black;
 }
-
 
 .mobile-container {
-	display: none;
+    display: none;
 }
 
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #fdfeff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1;
+}
 
-/*index page*/
+/* ===== INDEX PAGE ===== */
+
 .carousel {
-    position:absolute;
-	z-index:1;
-	left:17%;
-	top:19.5%;
-	max-width:70%;
-	max-height: 90%;
+    position: relative; 
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
     background-color: #e7d7b3;
     overflow: hidden;
-    margin: auto;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  }
-  
-  .carousel-track {
+}
+
+.carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-slide {
+}
+
+.carousel-slide {
     min-width: 100%;
     object-fit: contain;
-  }
-  
-  .carousel-button {
+}
+
+.carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -99,76 +114,74 @@ a.buttonlinkbar:hover{
     cursor: pointer;
     padding: 10px;
     z-index: 1;
-  }
-  
-  .carousel-button.prev {
+}
+
+.carousel-button.prev {
     left: 10px;
-  }
-  
-  .carousel-button.next {
+}
+
+.carousel-button.next {
     right: 10px;
-  }
+}
 
 div.container {
     display: flex;
-    position: absolute;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    min-height:100%;
-    min-width:98.4%;
-    left:0;
-    top:115%;
-    background-color: #B3E7BD;
-    padding: 10px;
-   }
-
-   #Game_box {
-    position: sticky;
-    max-width: 30%;
-    max-height: 5000px;
-    background-color: #B3C3E7;
-    padding: 10px;
-   }
-
-   #About_box {
-    position: sticky;
-    max-width: 30%;
-    min-height: 300px;
-    background-color: #B3C3E7;
-    padding: 10px;
-   }
-
-    div.newsletter{
-    position:absolute;
-    min-width: 100%;
-    max-height: 3%;
-    top:225%;
-    left:0%;
-    text-align: center;
-    background-color: #e7d7b3;
-    border: 5px black;
-   }
-
-    div.bottomlinkbar{
-    position: absolute;
-    top:270%;
-    left:0%;
     width: 100%;
-    height:38%;
-    text-align: center;
-    background-color: #B3C3E7;
-    overflow: hidden;
-   }
-
-/*about us page*/
-div.carouselabout{
-    position: static;
-    left:0%;
+    background-color: #B3E7BD;
+    padding: 20px 0;
+    margin: 0 auto;
 }
 
-/*game page*/
+#Game_box, #About_box {
+    width: 45%;
+    min-width: 300px;
+    background-color: #B3C3E7;
+    padding: 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+#Game_box button, #About_box button {
+    background-color: #e7d7b3;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    
+    text-decoration: none;
+    display: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+/* ===== FOOTER ===== */
+div.bottomlinkbar {
+    width: 100%;
+    text-align: center;
+    background-color: #B3C3E7;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.bottomlinkbar a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.bottomlinkbar a:hover {
+    text-decoration: underline;
+}
+
+.bottomlinkbar img.logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
 
 
-
+/* ===== GAME PAGE ===== */
 #map-container { 
     display: flex;
     flex-direction: column;
@@ -179,10 +192,14 @@ div.carouselabout{
 
 #map { 
     height: 500px;
-     cursor: crosshair; 
-     margin: 10px 0;
-     align-items: center;
-    }
+    cursor: crosshair; 
+    margin: 10px 0;
+    align-items: center;
+}
+
+.result {
+    text-align: center;
+}
 
 #question-box {
     position: absolute;
@@ -196,11 +213,13 @@ div.carouselabout{
     z-index: 500;
     width: 200px;
 }
+
 #question-image {
     width: 100%;
     border-radius: 5px;
     margin-top: 8px;
 }
+
 #popup {
     position: fixed;
     top: 50%;
@@ -214,25 +233,28 @@ div.carouselabout{
     z-index: 1000;
     width: 300px;
 }
+
 #popup button {
     margin-top: 10px;
 }
+
 #previous-scores {
     text-align: left;
     font-size: 14px;
     margin-top: 10px;
 }
+
 #calendar {
-    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
     margin: 20px auto;
     width: fit-content;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr) ;
-    gap: 5px;
     background-color: #bec4be;
-    gap: 5px;
     padding: 10px;
+    border: 2px solid black;
 }
+
 .day-button {
     padding: 22px 22px;
     border: solid #ccc;
@@ -240,42 +262,187 @@ div.carouselabout{
     cursor: pointer;
     border-radius: 100px;
     position: relative;
-    width:100%;
-    font-size: 1em
-
+    width: 100%;
+    font-size: 1em;
 }
+
 .day-button:hover {
     background: #e0e0e0;
 }
+
 .day-score {
     position: static;
     text-align: center;
     font-size: 10px;
     color: green;
 }
+
 .day-button[disabled] {
     background-color: #ffffff;
     cursor: not-allowed;
 }
+
+.day-button.today {
+    border: 2px solid #ff5722;
+    font-weight: bold;
+}
+
+.day-button.today[disabled] {
+    background-color: #e8f5e9;
+}
+
 #calendar-controls {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    position:absolute;
     margin-bottom: 10px;
     border: 2px solid black;
     background-color: #bec4be;
     justify-content: center;
     width: fit-content;
-    left: 40%
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
 }
-.day-button.today {
-     border: 2px solid #ff5722;
-     font-weight: bold;
+
+/* ===== About Us Page ===== */
+
+div.jumbotron{
+    text-align:center;
+    background-color: #e7d7b3;
+}
+
+div.containerabout{
+    background-color: #e7d7b3;
+}
+
+div.col-sm-4{
+    background-color: #B3C3E7;
+}
+
+.carouselabout {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+    padding: 15px;
+    background: rgba(179, 195, 231, 0.8);
+    color: #000;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel-caption h3 {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+
+
+/* ===== MEDIA QUERIES NAVIGATION 768px ===== */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #B3C3E7;
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
     }
     
-.day-button.today[disabled] {
-    background-color: #e8f5e9;
-    }   
+    .main-nav.active {
+        display: flex;
+    }
     
+    .mobile-menu-button {
+        display: block;
+        
+    }
+    
+    .logo {
+        max-width: 120px;
+    }
+
+    /* ===== MEDIA QUERIES INDEX PAGE 768px===== */
+    .carousel {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    div.container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    #Game_box, #About_box {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .bottomlinkbar {
+        padding: 15px 0;
+    }
+    
+    .bottomlinkbar a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* ===== MEDIA QUERIES GAME PAGE 768px===== */
+    #map-container {
+        width: 95%;
+    }
+
+    #map {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+/* ===== MEDIA QUERIES NAVIGATION 480px ===== */
+    .main-header {
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        max-width: 100px;
+    }
+    
+    .nav-link {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+/* ===== MEDIA QUERIES INDEX 768px ===== */
+    .carousel {
+        left: 5%;
+        top: 20%;
+        max-width: 90%;
+    }
+/* ===== MEDIA QUERIES GAME PAGE 480px===== */
+
+    #calendar-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .day-button {
+        padding: 15px 15px;
+        font-size: 0.9em;
+    }
 }
